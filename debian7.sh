@@ -30,20 +30,6 @@ fi
 # go to root
 cd
 
-# check registered ip
-wget -q -O /etc/imd http://script.fawzya.net/premium/daftarip.txt
-wget -q -O daftarip http://script.fawzya.net/premium/daftarip.txt
-if ! grep -w -q $MYIP daftarip; then
-	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
-	if [[ $vps = "FNS" ]]; then
-		echo "Info : www.fawzya.net"
-	else
-		echo "Info : www.fawzya.net"
-	fi
-	rm -f /root/daftarip
-	exit
-fi
-
     NORMAL=`echo "\033[m"`
     MENU=`echo "\033[36m"` #Blue
     NUMBER=`echo "\033[33m"` #yellow
